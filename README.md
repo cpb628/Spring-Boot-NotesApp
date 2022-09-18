@@ -1,4 +1,4 @@
-# Spring-Boot-NotesApp
+# NotesApp using Spring-Boot and ReactJS
 Notes-App Todo using Spring Boot and ReactJS
 
 ## Spring-Boot Initializer Services / Dependencies
