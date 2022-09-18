@@ -1,19 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import NotesService from "../services/NotesService";
+
 
 const NotesList = () => {
 
-    const [notes, setNotes] = useState([
-        {title: "First Note", body: "My First Note", category: "Programming", id:1},
-        {title: "Second Note", body: "My Second Note", category: "Work", id:2},
-        {title: "Thrid Note", body: "My Thrid Note", category: "Vacation", id:3}
-    ])
+    const [notes, setNotes] = useState([])
+
+    useEffect(() => {
+        NotesService.getAll()
+            .then(response => {
+                console.log('Printing Response', response.data);
+                setNotes(response.data);
+            })
+            .catch (error => {
+                console.log('something went wrong!', error)
+            })
+    }, []);
 
     return (
         <div>
             <h1>List of Notes</h1>
             {
-                notes.map(note => (
-                    <div>
+               notes.map(note => (
+                    <div key={note.id}>
                         <p>{note.id}</p>
                         <p>{note.title}</p>
                         <p>{note.body}</p>
