@@ -11,3 +11,8 @@ Notes-App Todo using Spring Boot and ReactJS
 ## ReactJS Module Requirements
  - Axios
  - UseState / Hook
+
+
+## MySQL Create Database
+ - Create Database Name "notesapp"
+ - Create Table Name "tbl_notes", using ORM, @Entity in Java Spring Boot
