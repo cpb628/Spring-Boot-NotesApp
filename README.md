@@ -10,7 +10,9 @@ Notes-App Todo using Spring Boot and ReactJS
 
 ## ReactJS Module Requirements
  - Axios
- - UseState / Hook
+ - UseState / Hooks
+ - UseEffect
+
 
 
 ## MySQL Create Database
